@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="styles/base.css">
 
 
-    <!-- <script src="scripts/getdates.js" defer></script>
-    <script src="scripts/navigation.js" defer></script> -->
+    <script src="scripts/getdates.js" defer></script>
+    <!-- <script src="scripts/navigation.js" defer></script> -->
 
     <!-- <script src="scripts/getjokes.js" defer></script> -->
     <!-- <script src="scripts/spotlight.js" defer></script> -->
@@ -37,57 +37,50 @@
     <header>
         <img src="images/leaves.svg" alt="icon of leaves" width="25" height="25">
         <span><b>Mobile Librarian</b></span>
-        <button id="save-btn" class="hamburger" title="hamburger menu"></button>
-        <div class="hiddenham"></div>
+        <button id="save-btn" class="save" title="save">Save</button>
+        <!-- <div class="hiddenham"></div> -->
     </header>
     <main>
-        <nav id="nav-bar" class="hidden">
+        <!-- <nav id="nav-bar" class="hidden">
             <ul>
                 <li class="current"><a href="index.html">Home</a></li>
                 <li><a href="resources.html">Resources</a></li>
                 <li><a href="search.html">Search</a></li>
 
             </ul>
-        </nav>
+        </nav> -->
         <img src="images/fun-big.webp" alt="fun picture" id="hero">
-        <div class="dad">
+        <div class="add">
             <section>
 
-                <h1 class="what">What are Dad Jokes?</h1>
-                <section class="word">
-                    <p>Dad Jokes are jokes that are often told
-                        by fathers to their childern. These
-                        jokes often get groans or an eye roll
-                        from children and adults alike. They are
-                        usually clean jokes, so they are appropriate
-                        for all ages. </p>
-                    <p>These jokes often include puns. Some
-                        dads have many dad jokes, while others
-                        have one or two jokes ready to go. </p>
-                    <p>Non dads can also say dad jokes.</p>
-                </section>
+                <h1>Add to Your Library</h1>
+                <input type="text" id="search">
+                <button id="author">Search By Author</button>
+                <button id="title">Search By Title</button>
+                <button id="keywork">Search By Keyword</button>
+                <button id="subject">Search By Subject</button>
+
+                <div id="bookCard"></div>
+                <button id="addBook">Add Book to Your Library</button>
 
             </section>
-            <section class="joke">
+            <section class="yourLibrary">
+                <h1>Your Library</h1>
+                <button id="view">View All</button>
+                <button id="fiction">Fiction</button>
+                <button id="nonfiction">Non Fiction</button>
+                <input type="text" name="Sort Term" id="sort">
+                <button id="authorView">View By Author</button>
+                <button id="subjectView">View By Sunject</button>
+                <button id="illustrator">View By Illustrator</button>
 
-                <h2>Random Joke:</h2>
-                <p id="randomJoke"></p>
-                <button id="newJoke">New Joke</button>
-
-
+                <div id="libraryCards"></div>
             </section>
-            <img class="horse" src="images/horse.webp" alt="Laughing Horse" loading="lazy">
-        </div>
+            </div>
     </main>
     <footer>
-        <section>
-            <p>Possible web site address: DadJokes.com</p>
-            <a href="attriubution.txt" target="_blank" title="Attributions">Attributions</a>
-            <a href="https://www.loom.com/embed/8a9e9fdbbc9f470d989640a438737d40?sid=13d396a9-bc22-4571-bc39-72b81e195c49"
-                title="Video of Project">Loom Presentation</a>
-
-
-
+        
+            
 
 
             <section id="signature">
