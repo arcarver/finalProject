@@ -4,7 +4,7 @@
     --background: #f0f7f4ff;
     --primary-font-color: black;
     --secondary-color: #873d48ff;
-    --priamry-accent-color: #d58936ff;
+    --primary-accent-color: #d58936ff;
     --secondary-accent-color: #6a8d92ff;
 
 
@@ -22,28 +22,35 @@ header {
     align-items: center;
     justify-content: space-between;
     background-color: var(--secondary-color);
+    color: var(--background);
+
+    height: 50px;
 }
 
 header img {
     padding: 5px;
+    width: 35px;
+    height: 35px;
+    color: var(--background);
 }
 
-span {
-    font-family: var(--primary-font);
+.appName {
+    font-family: var(--secondary-font);
+    font-size: xx-large;
+}
+
+/* body  */
+
+
+
+button:hover {
+    background-color: var(--primary-accent-color);
 }
 
 
-
-.current a {
-    color: whitesmoke;
-}
-
-save a:hover {
-    background-color: var(--accent-color);
-}
-
-.current {
+.add {
     background-color: var(--primary-color);
+    color: var(--background);
 
 }
 
@@ -72,53 +79,30 @@ h2 {
     padding-left: 5px;
 }
 
+@keyframes colorChange {
+    0% {
+        border-color: var(--primary-accent-color);
+    }
 
+    33% {
+        border-color: var(--primary-color);
+    }
 
-.emphasis {
+    66% {
+        border-color: var(--primary-accent-color);
+    }
+
+    100% {
+        border-color: var(--secondary-color);
+    }
+}
+
+.yourLibrary {
     background-color: var(--secondary-font-color);
-    color: var(--background);
+    color: black;
     padding: 15px;
-    border: 4px dotted var(--secondary-color);
-}
-
-form {
-    display: grid;
-    max-width: 356px;
-    border: 4px solid var(--primary-font-color);
-    border-radius: 8px;
-    padding-bottom: 5px;
-}
-
-.term {
-    display: unset;
-}
-
-.top {
-    flex-direction: column;
-}
-
-#submit {
-    padding: 5px;
-    margin: 5px;
-    background-color: var(--secondary-color);
-    /* color: var(--background); */
-}
-
-.radio {
-    display: grid;
-    padding: 8px;
-    margin-left: 5px;
-
-}
-
-input {
-    accent-color: var(--primary-color);
-    border: 2px solid var(--primary-color);
-}
-
-label {
-    padding: 2px;
-    margin: 3px;
+    border: 4px dotted var(--primary-accent-color);
+    animation: colorChange 3s infinite alternate;
 }
 
 h3 {
@@ -126,40 +110,7 @@ h3 {
     justify-content: center;
 }
 
-.term {
-    display: grid;
 
-}
-
-.search {
-    margin-left: 10px;
-}
-
-.bananaImg {
-    width: 95%;
-}
-
-
-
-#searchResults {
-    border: 5px dashed var(--primary-font-color);
-    color: var(--secondary-font-color);
-}
-
-#firstSearchJoke {
-    border: 4px solid var(--primary-color);
-    padding: 10px;
-}
-
-
-
-.visits {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    background-color: var(--secondary-font-color);
-    color: var(--background);
-}
 
 div #bookCard {
     border: 3px solid var(--secondary-color);
@@ -167,30 +118,18 @@ div #bookCard {
     height: 50px;
 }
 
-.mental {
-    border: 1px solid var(--primary-font-color);
-    border-radius: 20px;
-    margin: 5px;
-    padding: 5px;
-    background-color: var(--background);
-
-}
-
-.cost {
-    color: var(--secondary-font-color);
-    display: grid;
-    justify-content: center;
-}
-
 a {
     text-decoration: none;
     color: var(--background);
     padding-left: 10px;
 }
+#accent{
+    width: 100%;
+}
 
 /* adjusting for differnt size screens */
 @media screen and (min-width: 600px) {
-   
+
     ul {
         display: flex;
         justify-content: space-around;
@@ -207,7 +146,7 @@ a {
 
     }
 
-    
+
 
     .search {
         display: grid;
@@ -215,7 +154,7 @@ a {
         margin-left: 10px;
     }
 
-    .bananaimg {
+    .hero {
         grid-area: 1/2/2/3;
         margin-left: 1px;
     }
@@ -238,4 +177,3 @@ footer {
     color: var(--background);
     border-top: 3px solid var(--primary-color);
 }
-
