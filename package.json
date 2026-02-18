@@ -1,7 +1,7 @@
 {
   "name": "outside2",
   "version": "3.0.0",
-  "description": "Boilerplate for WDD 330 SleepOutside project",
+  "description": "Final Project for WDD 330",
   "main": "main.js",
   "scripts": {
     "start": "vite",
