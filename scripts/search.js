@@ -1,4 +1,4 @@
-const url = 'https://openlibrary.org/search.json'; 
+const url = 'https://openlibrary.org/search.json?q=heidi'; 
 const headers = new Headers({
     'User-Agent': "https://finalproject-jt9r.onrender.com/ (arcarver25@gmail.com) Annie Carver"
 });
@@ -12,7 +12,7 @@ const options = {
     headers: headers
 };
 
-async function search(url, searchText, searchType) {
+async function search(url) {
 
     try {
         const response = await fetch(url, {
@@ -25,8 +25,8 @@ async function search(url, searchText, searchType) {
         }
         const data = await response.json();
         console.log(data);
-        console.log(data.title);
-        libraryCards.textContent = data.title
+        console.log(data.docs);
+        bookCard.textContent = data.docs
     }
     catch (error) {
         console.error('Error fetching book:', error);
@@ -35,7 +35,7 @@ async function search(url, searchText, searchType) {
 }
 
 searchTitle.addEventListener('click', () => {
-    search(`${url}?title=${searchText}`);
+    search(url);
 })
     
 

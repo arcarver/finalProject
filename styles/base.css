@@ -161,9 +161,10 @@ h3 {
     color: var(--background);
 }
 
-#healthCards {
+div #bookCard {
     border: 3px solid var(--secondary-color);
     background-color: var(--secondary-color);
+    height: 50px;
 }
 
 .mental {
