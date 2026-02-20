@@ -1,7 +1,10 @@
+let type = 'title';
+let authID = 0;
+let keyword = "";
 const key = '457bwambefy64g23crn7d8qf';
-// const urlRH = 'https://reststop.randomhouse.com'
+const urlRH = `https://reststop.randomhouse.com/resources/${type}?appid=${key}&start=0$max=6&expandLevel=0&onsaleStart=MM/dd/yyyy&onsaleEnd=MM/dd/yyyy&authorid=${authID}&workid=0&keyword=${keyword}`
 // test url 
-const urlRH = 'https://reststop.randomhouse.com/resources/titles?start=0&max=4&expandLevel=0&onsaleStart=MM/dd/yyyy&onsaleEnd=MM/dd/yyyy&authorid=0&workid=0&keyword=Grisham%20Christmas'
+// const urlRH = `https://reststop.randomhouse.com/resources/titles?start=0&max=4&expandLevel=0&onsaleStart=MM/dd/yyyy&onsaleEnd=MM/dd/yyyy&authorid=0&workid=0&keyword=Grisham%20Christmas`
 
 
 async function getInfo() {
@@ -9,7 +12,7 @@ async function getInfo() {
         const response = await fetch(
             'urlRH',
             {
-                eaders: { "Accept": "application/json" },
+                headers: { "Accept": "application/json" },
             }
         );
         if (!response.ok) {
